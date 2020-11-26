@@ -22,6 +22,7 @@ class Game:
             winner = self.check_winner()
             if  winner != None:
                 Tk().wm_withdraw() #to hide the main window
+                pygame.display.update()
                 messagebox.showinfo('GRATS!','El ganador es el {}'.format(winner))
                 pygame.quit()
             self.change_turn()
